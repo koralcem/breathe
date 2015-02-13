@@ -15,8 +15,8 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		//redView.frame.origin.x = 0
-		
+		var displayLink = CADisplayLink.init(target:self, selector:"update:")
+		displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
 
 		
 		
@@ -34,6 +34,11 @@ class ViewController: UIViewController {
 			}, completion: { finished in
 				println("Animation done")
 		})
+	}
+	
+	func update(displayLink: CADisplayLink) {
+		println(displayLink.timestamp)
+		println("Update called")
 	}
 
 
