@@ -9,15 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
+	@IBOutlet weak var redView: UIView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+		//redView.frame.origin.x = 0
+		
+
+		
+		
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
+	}
+	
+	override func viewDidAppear(animated: Bool) {
+		UIView.animateWithDuration(2.0, delay: 0, options: .CurveEaseOut, animations: {
+			self.redView.frame.origin.x -= 50
+			
+			}, completion: { finished in
+				println("Animation done")
+		})
 	}
 
 
