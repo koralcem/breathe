@@ -1,3 +1,6 @@
+# On the Mac
+.DS_Store
+
 # Xcode
 #
 build/

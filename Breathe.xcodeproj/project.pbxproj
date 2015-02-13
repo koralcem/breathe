@@ -405,6 +405,7 @@
 				719264391A8DB4A200BE9490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7192643A1A8DB4A200BE9490 /* Build configuration list for PBXNativeTarget "BreatheTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				7192643C1A8DB4A200BE9490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
