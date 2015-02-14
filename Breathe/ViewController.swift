@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 	@IBOutlet weak var redView: UIView!
+	
+	var originalHeight: CGFloat = 0
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		var displayLink = CADisplayLink.init(target:self, selector:"update:")
-		displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+//		var displayLink = CADisplayLink.init(target:self, selector:"update:")
+//		displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
 
 		
 		
@@ -28,17 +30,33 @@ class ViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		UIView.animateWithDuration(2.0, delay: 0, options: .CurveEaseOut, animations: {
-			self.redView.frame.origin.x -= 50
-			
-			}, completion: { finished in
-				println("Animation done")
-		})
+		originalHeight = redView.frame.size.height
+		collapse()
 	}
 	
 	func update(displayLink: CADisplayLink) {
 		println(displayLink.timestamp)
 		println("Update called")
+	}
+	
+	func collapse() {
+		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
+			self.redView.frame.size.height = 0
+			
+			}, completion: { finished in
+				println("Left done")
+				self.expand()
+		})
+	}
+	
+	func expand() {
+		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
+			self.redView.frame.size.height = self.originalHeight
+			
+			}, completion: { finished in
+				println("Right done")
+				self.collapse()
+		})
 	}
 
 
