@@ -10,11 +10,14 @@ class ViewController: UIViewController {
 	let barCornerRadius: CGFloat = 5
 	
 	var originalHeight: CGFloat = 0
+	var originalOrigin = CGPointZero
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		println("view loaded")
 		// Do any additional setup after loading the view, typically from a nib.
 		originalHeight = breathBar.frame.size.height
+		originalOrigin = breathBar.frame.origin
 		
 		// setup the attributes of the bars that can't be adjusted from IB
 		borderBar.backgroundColor = UIColor.whiteColor()
@@ -35,10 +38,20 @@ class ViewController: UIViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		//collapse the bar to begin with
+		collapseImmediately()
+		
+		println("view appeared!")
+		
+		//TODO: initial expansion should be without delay, one coming at the end of the collapse
+		//function can have the delay at the bottom before it
+		expand()
+	}
+	
+	func collapseImmediately() {
+		breathBar.layer.removeAllAnimations()
+		breathBar.frame.origin = originalOrigin
 		breathBar.frame.origin.y += originalHeight
 		breathBar.frame.size.height = 0
-
-		expand()
 	}
 	
 	func collapse() {
@@ -47,8 +60,12 @@ class ViewController: UIViewController {
 			self.breathBar.frame.origin.y += self.originalHeight
 			
 			}, completion: { finished in
-				println("collapse done")
-				self.expand()
+				if (finished) {
+					println("collapse done")
+					self.expand()
+				} else {
+					self.collapseImmediately()
+				}
 		})
 	}
 	
@@ -58,11 +75,13 @@ class ViewController: UIViewController {
 			self.breathBar.frame.origin.y -= self.originalHeight
 			
 			}, completion: { finished in
-				println("expand done")
-				self.collapse()
+				if (finished) {
+					println("expand done")
+					self.collapse()
+				} else {
+					self.collapseImmediately()
+				}
 		})
 	}
-
-
 }
 
