@@ -30,6 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="borderBar" destination="nQG-Hq-75E" id="wYK-cp-sox"/>
                         <outlet property="breathBar" destination="gU7-AF-QwU" id="ah7-hY-Geo"/>
                     </connections>
                 </viewController>

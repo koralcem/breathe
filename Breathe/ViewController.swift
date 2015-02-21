@@ -2,6 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
 	@IBOutlet weak var breathBar: UIView!
+	@IBOutlet weak var borderBar: UIView!
 	
 	var originalHeight: CGFloat = 0
 
@@ -9,6 +10,8 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		originalHeight = breathBar.frame.size.height
+		borderBar.backgroundColor = UIColor.whiteColor()
+	
 		
 		println("The height of the bar: \(originalHeight)")
 	}
