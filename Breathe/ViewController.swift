@@ -16,6 +16,9 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		originalHeight = redView.frame.size.height
+		
+		println("The height of the bar: \(originalHeight)")
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -24,16 +27,16 @@ class ViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		originalHeight = redView.frame.size.height
 		collapse()
 	}
-		
+	
 	func collapse() {
 		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
 			self.redView.frame.size.height = 0
+			self.redView.frame.origin.y += self.originalHeight
 			
 			}, completion: { finished in
-				println("Left done")
+				println("collapse done")
 				self.expand()
 		})
 	}
@@ -41,9 +44,10 @@ class ViewController: UIViewController {
 	func expand() {
 		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
 			self.redView.frame.size.height = self.originalHeight
+			self.redView.frame.origin.y -= self.originalHeight
 			
 			}, completion: { finished in
-				println("Right done")
+				println("expand done")
 				self.collapse()
 		})
 	}
