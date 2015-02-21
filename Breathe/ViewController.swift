@@ -1,14 +1,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-	@IBOutlet weak var redView: UIView!
+	@IBOutlet weak var breathBar: UIView!
 	
 	var originalHeight: CGFloat = 0
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		originalHeight = redView.frame.size.height
+		originalHeight = breathBar.frame.size.height
 		
 		println("The height of the bar: \(originalHeight)")
 	}
@@ -20,16 +20,16 @@ class ViewController: UIViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		//collapse the bar to begin with
-		redView.frame.origin.y += originalHeight
-		redView.frame.size.height = 0
+		breathBar.frame.origin.y += originalHeight
+		breathBar.frame.size.height = 0
 
 		expand()
 	}
 	
 	func collapse() {
 		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
-			self.redView.frame.size.height = 0
-			self.redView.frame.origin.y += self.originalHeight
+			self.breathBar.frame.size.height = 0
+			self.breathBar.frame.origin.y += self.originalHeight
 			
 			}, completion: { finished in
 				println("collapse done")
@@ -39,8 +39,8 @@ class ViewController: UIViewController {
 	
 	func expand() {
 		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
-			self.redView.frame.size.height = self.originalHeight
-			self.redView.frame.origin.y -= self.originalHeight
+			self.breathBar.frame.size.height = self.originalHeight
+			self.breathBar.frame.origin.y -= self.originalHeight
 			
 			}, completion: { finished in
 				println("expand done")
