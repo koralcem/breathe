@@ -27,7 +27,11 @@ class ViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		collapse()
+		//collapse the bar to begin with
+		redView.frame.origin.y += originalHeight
+		redView.frame.size.height = 0
+
+		expand()
 	}
 	
 	func collapse() {
