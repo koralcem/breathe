@@ -4,13 +4,25 @@ class ViewController: UIViewController {
 	@IBOutlet weak var breathBar: UIView!
 	@IBOutlet weak var borderBar: UIView!
 	
+	// There seems to be no IB attributes for these
+	let borderBarWidth: CGFloat = 10
+	let borderBarColor = UIColor.blueColor().CGColor
+	let barCornerRadius: CGFloat = 5
+	
 	var originalHeight: CGFloat = 0
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		originalHeight = breathBar.frame.size.height
+		
+		// setup the attributes of the bars that can't be adjusted from IB
 		borderBar.backgroundColor = UIColor.whiteColor()
+		borderBar.layer.borderColor = borderBarColor
+		borderBar.layer.borderWidth = borderBarWidth
+		borderBar.layer.cornerRadius = barCornerRadius
+		
+		breathBar.layer.cornerRadius = barCornerRadius
 	
 		
 		println("The height of the bar: \(originalHeight)")
