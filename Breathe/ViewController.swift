@@ -16,12 +16,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		
-//		var displayLink = CADisplayLink.init(target:self, selector:"update:")
-//		displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
-
-		
-		
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -33,12 +27,7 @@ class ViewController: UIViewController {
 		originalHeight = redView.frame.size.height
 		collapse()
 	}
-	
-	func update(displayLink: CADisplayLink) {
-		println(displayLink.timestamp)
-		println("Update called")
-	}
-	
+		
 	func collapse() {
 		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
 			self.redView.frame.size.height = 0
