@@ -18,10 +18,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gU7-AF-QwU">
                                 <rect key="frame" x="142" y="65" width="282" height="348"/>
-                                <color key="backgroundColor" red="1" green="0.15379793350934201" blue="0.064399025411709832" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="redView" destination="gU7-AF-QwU" id="l8X-lY-sa8"/>
