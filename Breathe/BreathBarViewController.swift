@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class BreathBarViewController: UIViewController {
 	@IBOutlet weak var breathBar: UIView!
 	@IBOutlet weak var borderBar: UIView!
 	

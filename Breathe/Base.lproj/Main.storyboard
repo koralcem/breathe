@@ -7,7 +7,7 @@
         <!--Breath Bar-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" userLabel="Breath Bar" customClass="ViewController" customModule="Breathe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" userLabel="Breath Bar" customClass="BreathBarViewController" customModule="Breathe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1271" y="-348"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="mSb-eA-qTU">
             <objects>
-                <viewController id="noG-18-2HF" sceneMemberID="viewController">
+                <viewController id="noG-18-2HF" customClass="SettingsViewController" customModule="Breathe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pQJ-P9-5cB"/>
                         <viewControllerLayoutGuide type="bottom" id="ouV-Mg-HMz"/>
