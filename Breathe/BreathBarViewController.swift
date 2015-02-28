@@ -16,8 +16,6 @@ class BreathBarViewController: UIViewController {
 		super.viewDidLoad()
 		println("view loaded")
 		// Do any additional setup after loading the view, typically from a nib.
-		originalHeight = breathBar.frame.size.height
-		originalOrigin = breathBar.frame.origin
 		
 		// setup the attributes of the bars that can't be adjusted from IB
 		borderBar.backgroundColor = UIColor.whiteColor()
@@ -37,6 +35,10 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
+
+		originalHeight = breathBar.frame.size.height
+		originalOrigin = breathBar.frame.origin
+
 		//collapse the bar to begin with
 		collapseImmediately()
 		
