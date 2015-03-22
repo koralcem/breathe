@@ -38,6 +38,7 @@
 		7192642D1A8DB4A200BE9490 /* BreatheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreatheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		719264321A8DB4A200BE9490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		719264331A8DB4A200BE9490 /* BreatheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheTests.swift; sourceTree = "<group>"; };
+		71A4CCD31ABF73C700EEF862 /* notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 				719264241A8DB4A200BE9490 /* Images.xcassets */,
 				719264261A8DB4A200BE9490 /* LaunchScreen.xib */,
 				7192641B1A8DB4A200BE9490 /* Supporting Files */,
+				71A4CCD31ABF73C700EEF862 /* notes.txt */,
 			);
 			path = Breathe;
 			sourceTree = "<group>";

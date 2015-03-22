@@ -1,0 +1,8 @@
+- Figure out how to make width of bar relative to screen size
+- Allow 0 seconds for pauses
+- Have sliders snap to final value?
+- Nitpick: Have text label say "1 second" instead of "1 seconds"
+- Add an intro page?
+
+- Add a watch "glance"?
+
