@@ -13,7 +13,6 @@ class BreathBarViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		println("Breath bar view loaded")
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		// setup the attributes of the bars that can't be adjusted from IB
@@ -23,8 +22,6 @@ class BreathBarViewController: UIViewController {
 		borderBar.layer.cornerRadius = barCornerRadius
 		
 		breathBar.layer.cornerRadius = barCornerRadius
-	
-		println("Breath bar after load\n\(self.breathBarDescription())")
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -33,21 +30,12 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		println("Breath bar view appears")
-		
 		if CGRectIsEmpty(originalFrame) {
-			println("capturing original frame!!!!")
 			originalFrame = breathBar.frame
 		}
 		
-		println("Before collapse:\n\(self.breathBarDescription())")
 		collapseImmediately()	// Breath bar begins from the bottom
-		println("After collapse:\n\(self.breathBarDescription())")
-		
-		
-		//TODO: initial expansion should be without delay, one coming at the end of the collapse
-		//function can have the delay at the bottom before it
-		expand()
+		expand(0)				// Initial expansion starts immediately
 	}
 	
 	func collapseImmediately() {
@@ -57,33 +45,29 @@ class BreathBarViewController: UIViewController {
 		breathBar.frame.origin.y += originalFrame.size.height
 	}
 	
-	func collapse() {
-		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
+	func collapse(delay: NSTimeInterval) {
+		UIView.animateWithDuration(2.0, delay: delay, options: .CurveLinear, animations: {
 			self.breathBar.frame.size.height = 0
 			self.breathBar.frame.origin.y += self.originalFrame.size.height
 			
 			}, completion: { finished in
 				if (finished) {
-					println("collapse done")
-					self.expand()
+					self.expand(1)
 				} else {
-					println("collapse interrupted")
 					self.collapseImmediately()
 				}
 		})
 	}
 	
-	func expand() {
-		UIView.animateWithDuration(2.0, delay: 1.0, options: .CurveLinear, animations: {
+	func expand(delay: NSTimeInterval) {
+		UIView.animateWithDuration(2.0, delay: delay, options: .CurveLinear, animations: {
 			self.breathBar.frame.size.height = self.originalFrame.size.height
 			self.breathBar.frame.origin.y -= self.originalFrame.size.height
 			
 			}, completion: { finished in
 				if (finished) {
-					println("expand done")
-					self.collapse()
+					self.collapse(1)
 				} else {
-					println("expand interrupted")
 					self.collapseImmediately()
 				}
 		})
