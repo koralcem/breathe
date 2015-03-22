@@ -14,10 +14,10 @@ class BreathBarViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		NSUserDefaults.standardUserDefaults().registerDefaults([BreatheInTimeKey:2.0,
-																PauseTimeAfterBreathInKey:1.0,
-																BreatheOutTimeKey: 2.0,
-																PauseTimeAfterBreathOutKey: 1.0])
+		NSUserDefaults.standardUserDefaults().registerDefaults([BreatheInTimeKey:2,
+																PauseTimeAfterBreathInKey:1,
+																BreatheOutTimeKey: 2,
+																PauseTimeAfterBreathOutKey: 1])
 		
 		// setup the attributes of the bars that can't be adjusted from IB
 		borderBar.backgroundColor = UIColor.whiteColor()
@@ -50,7 +50,7 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	func collapse(delay: NSTimeInterval) {
-		UIView.animateWithDuration(NSUserDefaults.standardUserDefaults().doubleForKey(BreatheOutTimeKey),
+		UIView.animateWithDuration(Double(NSUserDefaults.standardUserDefaults().integerForKey(BreatheOutTimeKey)),
 									delay: delay,
 									options: .CurveLinear,
 									animations: {
@@ -59,7 +59,7 @@ class BreathBarViewController: UIViewController {
 			
 			}, completion: { finished in
 				if (finished) {
-					self.expand(NSUserDefaults.standardUserDefaults().doubleForKey(PauseTimeAfterBreathOutKey))
+					self.expand(Double(NSUserDefaults.standardUserDefaults().integerForKey(PauseTimeAfterBreathOutKey)))
 				} else {
 					self.collapseImmediately()
 				}
@@ -67,7 +67,7 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	func expand(delay: NSTimeInterval) {
-		UIView.animateWithDuration(NSUserDefaults.standardUserDefaults().doubleForKey(BreatheInTimeKey),
+		UIView.animateWithDuration(Double(NSUserDefaults.standardUserDefaults().integerForKey(BreatheInTimeKey)),
 									delay: delay,
 									options: .CurveLinear,
 									animations: {
@@ -76,7 +76,7 @@ class BreathBarViewController: UIViewController {
 			
 			}, completion: { finished in
 				if (finished) {
-					self.collapse(NSUserDefaults.standardUserDefaults().doubleForKey(PauseTimeAfterBreathInKey))
+					self.collapse(Double(NSUserDefaults.standardUserDefaults().integerForKey(PauseTimeAfterBreathInKey)))
 				} else {
 					self.collapseImmediately()
 				}
