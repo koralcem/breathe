@@ -26,6 +26,8 @@ class SettingsViewController: UIViewController {
 		
 		sliders = [breatheInTimeSlider, pauseAfterBreatheInTimeSlider, breatheOutTimeSlider, pauseAfterBreathOutTimeSlider]
 		labels = [breatheInTimeLabel, pauseAfterBreathInTimeLabel, breatheOutTimeLabel, pauseAfterBreathOutTimeLabel]
+		
+		refreshInterface()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -38,9 +40,16 @@ class SettingsViewController: UIViewController {
 	
 	@IBAction func sliderValueChanged(sender: UISlider) {
 		let newValue = Int(round(sender.value))
-		let idx = find(sliders, sender)
-		labels[idx!].text = "\(newValue) seconds"
-		NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey:userDefaultsKeys[idx!])
+		let index = find(sliders, sender)
+		labels[index!].text = "\(newValue) seconds"
+		NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey:userDefaultsKeys[index!])
+	}
+	
+	func refreshInterface() {
+		for (index, defaultKey) in enumerate(userDefaultsKeys) {
+			let value = NSUserDefaults.standardUserDefaults().integerForKey(defaultKey)
+			labels[index].text = "\(value) seconds"
+			sliders[index].value = Float(value)
+		}
 	}
 }
-
