@@ -50,16 +50,13 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	func collapse(delay: NSTimeInterval) {
-		UIView.animateWithDuration(Double(NSUserDefaults.standardUserDefaults().integerForKey(BreatheOutTimeKey)),
-									delay: delay,
-									options: .CurveLinear,
-									animations: {
+		UIView.animateWithDuration(userDefaultForTime(BreatheOutTimeKey), delay: delay, options: .CurveLinear, animations: {
 			self.breathBar.frame.size.height = 0
 			self.breathBar.frame.origin.y += self.originalFrame.size.height
 			
 			}, completion: { finished in
 				if (finished) {
-					self.expand(Double(NSUserDefaults.standardUserDefaults().integerForKey(PauseTimeAfterBreathOutKey)))
+					self.expand(self.userDefaultForTime(PauseTimeAfterBreathOutKey))
 				} else {
 					self.collapseImmediately()
 				}
@@ -67,16 +64,13 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	func expand(delay: NSTimeInterval) {
-		UIView.animateWithDuration(Double(NSUserDefaults.standardUserDefaults().integerForKey(BreatheInTimeKey)),
-									delay: delay,
-									options: .CurveLinear,
-									animations: {
+		UIView.animateWithDuration(userDefaultForTime(BreatheInTimeKey), delay: delay, options: .CurveLinear, animations: {
 			self.breathBar.frame.size.height = self.originalFrame.size.height
 			self.breathBar.frame.origin.y -= self.originalFrame.size.height
 			
 			}, completion: { finished in
 				if (finished) {
-					self.collapse(Double(NSUserDefaults.standardUserDefaults().integerForKey(PauseTimeAfterBreathInKey)))
+					self.collapse(self.userDefaultForTime(PauseTimeAfterBreathInKey))
 				} else {
 					self.collapseImmediately()
 				}
@@ -85,6 +79,10 @@ class BreathBarViewController: UIViewController {
 	
 	func breathBarDescription() -> String {
 		return "\tOrigin: x=\(breathBar.frame.origin.x), y=\(breathBar.frame.origin.y)\n\tSize: width=\(breathBar.frame.size.width), height=\(breathBar.frame.size.height)"
+	}
+	
+	func userDefaultForTime(userDefaultsKey: String) -> Double {
+		return Double(NSUserDefaults.standardUserDefaults().integerForKey(userDefaultsKey))
 	}
 }
 
