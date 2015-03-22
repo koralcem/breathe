@@ -14,6 +14,10 @@ class BreathBarViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		NSUserDefaults.standardUserDefaults().registerDefaults([BreatheInTimeKey:2.0,
+																PauseTimeAfterBreathInKey:1.0,
+																BreatheOutTimeKey: 2.0,
+																PauseTimeAfterBreathOutKey: 1.0])
 		
 		// setup the attributes of the bars that can't be adjusted from IB
 		borderBar.backgroundColor = UIColor.whiteColor()
@@ -46,13 +50,16 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	func collapse(delay: NSTimeInterval) {
-		UIView.animateWithDuration(2.0 /* breathe out time */, delay: delay, options: .CurveLinear, animations: {
+		UIView.animateWithDuration(NSUserDefaults.standardUserDefaults().doubleForKey(BreatheOutTimeKey),
+									delay: delay,
+									options: .CurveLinear,
+									animations: {
 			self.breathBar.frame.size.height = 0
 			self.breathBar.frame.origin.y += self.originalFrame.size.height
 			
 			}, completion: { finished in
 				if (finished) {
-					self.expand(1 /* pause after breath out */)
+					self.expand(NSUserDefaults.standardUserDefaults().doubleForKey(PauseTimeAfterBreathOutKey))
 				} else {
 					self.collapseImmediately()
 				}
@@ -60,13 +67,16 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	func expand(delay: NSTimeInterval) {
-		UIView.animateWithDuration(2.0 /* breathe in time */, delay: delay, options: .CurveLinear, animations: {
+		UIView.animateWithDuration(NSUserDefaults.standardUserDefaults().doubleForKey(BreatheInTimeKey),
+									delay: delay,
+									options: .CurveLinear,
+									animations: {
 			self.breathBar.frame.size.height = self.originalFrame.size.height
 			self.breathBar.frame.origin.y -= self.originalFrame.size.height
 			
 			}, completion: { finished in
 				if (finished) {
-					self.collapse(1 /* pause after breath in */)
+					self.collapse(NSUserDefaults.standardUserDefaults().doubleForKey(PauseTimeAfterBreathInKey))
 				} else {
 					self.collapseImmediately()
 				}
@@ -76,7 +86,5 @@ class BreathBarViewController: UIViewController {
 	func breathBarDescription() -> String {
 		return "\tOrigin: x=\(breathBar.frame.origin.x), y=\(breathBar.frame.origin.y)\n\tSize: width=\(breathBar.frame.size.width), height=\(breathBar.frame.size.height)"
 	}
-	
-	//TODO: have delay and expansion/collapse times respect NSUSerDefaults settings
 }
 
