@@ -18,5 +18,8 @@ class SettingsViewController: UIViewController {
 		
 		
 	}
+	
+	//TODO: provide feedback on the sliders
+	//TODO: set NSUserDefaults with slider values
 }
 

@@ -76,5 +76,7 @@ class BreathBarViewController: UIViewController {
 	func breathBarDescription() -> String {
 		return "\tOrigin: x=\(breathBar.frame.origin.x), y=\(breathBar.frame.origin.y)\n\tSize: width=\(breathBar.frame.size.width), height=\(breathBar.frame.size.height)"
 	}
+	
+	//TODO: have delay and expansion/collapse times respect NSUSerDefaults settings
 }
 
