@@ -41,15 +41,19 @@ class SettingsViewController: UIViewController {
 	@IBAction func sliderValueChanged(sender: UISlider) {
 		let newValue = Int(round(sender.value))
 		let index = find(sliders, sender)
-		labels[index!].text = "\(newValue) seconds"
+		labels[index!].text = labelTextForDuration(newValue)
 		NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey:userDefaultsKeys[index!])
 	}
 	
 	func refreshInterface() {
 		for (index, defaultKey) in enumerate(userDefaultsKeys) {
 			let value = NSUserDefaults.standardUserDefaults().integerForKey(defaultKey)
-			labels[index].text = "\(value) seconds"
+			labels[index].text = labelTextForDuration(value)
 			sliders[index].value = Float(value)
 		}
+	}
+		
+	func labelTextForDuration(duration: Int) -> String {
+		return "\(duration) second" + (duration == 1 ? "" : "s")
 	}
 }
