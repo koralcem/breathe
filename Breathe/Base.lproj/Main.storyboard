@@ -79,6 +79,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ttg-K7-Nog">
                                 <rect key="frame" x="14" y="100" width="572" height="31"/>
                                 <connections>
+                                    <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="Kok-Rc-xvI"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="wL4-cq-Seo"/>
                                 </connections>
                             </slider>
@@ -97,6 +98,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-fL-VYj">
                                 <rect key="frame" x="14" y="166.5" width="572" height="31"/>
                                 <connections>
+                                    <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="lrJ-rl-kXI"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="0Lz-yb-cmU"/>
                                 </connections>
                             </slider>
@@ -115,6 +117,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="zdr-dr-c6N">
                                 <rect key="frame" x="14" y="233" width="572" height="31"/>
                                 <connections>
+                                    <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="oyM-zZ-ye2"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="Gbf-f3-Na5"/>
                                 </connections>
                             </slider>
@@ -133,6 +136,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="HSp-d1-Kt8">
                                 <rect key="frame" x="14" y="299.5" width="572" height="31"/>
                                 <connections>
+                                    <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="9N4-Fo-uNc"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="HPC-wr-pqf"/>
                                 </connections>
                             </slider>

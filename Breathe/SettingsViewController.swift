@@ -39,10 +39,21 @@ class SettingsViewController: UIViewController {
 	}
 	
 	@IBAction func sliderValueChanged(sender: UISlider) {
-		let newValue = Int(round(sender.value))
-		let index = find(sliders, sender)
+		durationValueChanged(sender)
+	}
+	@IBAction func sliderTouchUpInside(sender: UISlider) {
+		durationValueChanged(sender, snapSlider:true)
+	}
+	
+	func durationValueChanged(slider: UISlider, snapSlider: Bool = false) {
+		let newValue = Int(round(slider.value))
+		let index = find(sliders, slider)
 		labels[index!].text = labelTextForDuration(newValue)
 		NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey:userDefaultsKeys[index!])
+		
+		if snapSlider {
+			slider.value = Float(newValue)
+		}
 	}
 	
 	func refreshInterface() {
@@ -52,7 +63,7 @@ class SettingsViewController: UIViewController {
 			sliders[index].value = Float(value)
 		}
 	}
-		
+	
 	func labelTextForDuration(duration: Int) -> String {
 		return "\(duration) second" + (duration == 1 ? "" : "s")
 	}

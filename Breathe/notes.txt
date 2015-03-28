@@ -1,4 +1,3 @@
-- Have sliders snap to final value?
 - Figure out how to make width of bar relative to screen size
 - Add an intro page?
 
