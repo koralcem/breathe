@@ -14,9 +14,9 @@ class BreathBarViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		NSUserDefaults.standardUserDefaults().registerDefaults([BreatheInTimeKey:2,
+		NSUserDefaults.standardUserDefaults().registerDefaults([BreatheInTimeKey:3,
 																PauseTimeAfterBreathInKey:1,
-																BreatheOutTimeKey: 2,
+																BreatheOutTimeKey: 4,
 																PauseTimeAfterBreathOutKey: 1])
 		
 		// setup the attributes of the bars that can't be adjusted from IB
