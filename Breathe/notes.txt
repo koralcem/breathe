@@ -1,5 +1,11 @@
-- Figure out how to make width of bar relative to screen size
 - Add an intro page?
+- Figure out final colors in the UI
+- Make icons
+- Form LLC
+- Register as iOS developer
+- Look into Test Flight
+- Publish
 
+======
 - Add a watch "glance"?
 
