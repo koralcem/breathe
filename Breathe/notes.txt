@@ -1,6 +1,7 @@
-- Add an intro page?
+- Fill LaunchScreen.xib
+- Add an intro page? Something like "Follow the bar..."
 - Figure out final colors in the UI
-- Make icons
+- Make icons: 58x58, 87x87, 80x80, 120x120, 120x120, 180x180
 - Form LLC
 - Register as iOS developer
 - Look into Test Flight
