@@ -84,20 +84,12 @@
 				7192641F1A8DB4A200BE9490 /* BreathBarViewController.swift */,
 				713FB4F51A9EC86D00F5E1E9 /* SettingsViewController.swift */,
 				719264211A8DB4A200BE9490 /* Main.storyboard */,
-				719264241A8DB4A200BE9490 /* Images.xcassets */,
 				719264261A8DB4A200BE9490 /* LaunchScreen.xib */,
-				7192641B1A8DB4A200BE9490 /* Supporting Files */,
+				719264241A8DB4A200BE9490 /* Images.xcassets */,
+				7192641C1A8DB4A200BE9490 /* Info.plist */,
 				71A4CCD31ABF73C700EEF862 /* notes.txt */,
 			);
 			path = Breathe;
-			sourceTree = "<group>";
-		};
-		7192641B1A8DB4A200BE9490 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7192641C1A8DB4A200BE9490 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		719264301A8DB4A200BE9490 /* BreatheTests */ = {
