@@ -1,6 +1,7 @@
-- Fill LaunchScreen.xib
-- Add an intro page? Something like "Follow the bar..."
+- Add an intro view? Something like "Follow the bar..."
+- Figure out launch screen: either something in LaunchScreen.xib, or see if you can use the main storyboard directly
 - Figure out final colors in the UI
+- Figure out final timings: defaults, and whether you want to allow up to 15 seconds on sliders
 - Make icons: 58x58, 87x87, 80x80, 120x120, 120x120, 180x180
 - Form LLC
 - Register as iOS developer
