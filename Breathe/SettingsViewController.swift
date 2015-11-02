@@ -47,7 +47,7 @@ class SettingsViewController: UIViewController {
 	
 	func durationValueChanged(slider: UISlider, snapSlider: Bool = false) {
 		let newValue = Int(round(slider.value))
-		let index = find(sliders, slider)
+		let index = sliders.indexOf(slider)
 		labels[index!].text = labelTextForDuration(newValue)
 		NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey:userDefaultsKeys[index!])
 		
@@ -57,7 +57,7 @@ class SettingsViewController: UIViewController {
 	}
 	
 	func refreshInterface() {
-		for (index, defaultKey) in enumerate(userDefaultsKeys) {
+		for (index, defaultKey) in userDefaultsKeys.enumerate() {
 			let value = NSUserDefaults.standardUserDefaults().integerForKey(defaultKey)
 			labels[index].text = labelTextForDuration(value)
 			sliders[index].value = Float(value)
