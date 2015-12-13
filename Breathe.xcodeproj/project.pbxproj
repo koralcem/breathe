@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7126FC021C1DE55A00636C9F /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7126FBFC1C1DE55A00636C9F /* Icon-29@2x.png */; };
+		7126FC031C1DE55A00636C9F /* Icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7126FBFD1C1DE55A00636C9F /* Icon-29@3x.png */; };
+		7126FC041C1DE55A00636C9F /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7126FBFE1C1DE55A00636C9F /* Icon-40@2x.png */; };
+		7126FC051C1DE55A00636C9F /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7126FBFF1C1DE55A00636C9F /* Icon-40@3x.png */; };
+		7126FC061C1DE55A00636C9F /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7126FC001C1DE55A00636C9F /* Icon-60@2x.png */; };
+		7126FC071C1DE55A00636C9F /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7126FC011C1DE55A00636C9F /* Icon-60@3x.png */; };
 		713FB4F61A9EC86D00F5E1E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713FB4F51A9EC86D00F5E1E9 /* SettingsViewController.swift */; };
 		7192641E1A8DB4A200BE9490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192641D1A8DB4A200BE9490 /* AppDelegate.swift */; };
 		719264201A8DB4A200BE9490 /* BreathBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192641F1A8DB4A200BE9490 /* BreathBarViewController.swift */; };
@@ -27,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7126FBFC1C1DE55A00636C9F /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@2x.png"; sourceTree = "<group>"; };
+		7126FBFD1C1DE55A00636C9F /* Icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@3x.png"; sourceTree = "<group>"; };
+		7126FBFE1C1DE55A00636C9F /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		7126FBFF1C1DE55A00636C9F /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		7126FC001C1DE55A00636C9F /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		7126FC011C1DE55A00636C9F /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		713FB4F51A9EC86D00F5E1E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		719264181A8DB4A200BE9490 /* Breathe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breathe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7192641C1A8DB4A200BE9490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +71,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7126FBFB1C1DE53200636C9F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				7126FBFC1C1DE55A00636C9F /* Icon-29@2x.png */,
+				7126FBFD1C1DE55A00636C9F /* Icon-29@3x.png */,
+				7126FBFE1C1DE55A00636C9F /* Icon-40@2x.png */,
+				7126FBFF1C1DE55A00636C9F /* Icon-40@3x.png */,
+				7126FC001C1DE55A00636C9F /* Icon-60@2x.png */,
+				7126FC011C1DE55A00636C9F /* Icon-60@3x.png */,
+			);
+			name = Icons;
+			path = resources/icons;
+			sourceTree = "<group>";
+		};
 		7192640F1A8DB4A200BE9490 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +114,7 @@
 				719264241A8DB4A200BE9490 /* Images.xcassets */,
 				7192641C1A8DB4A200BE9490 /* Info.plist */,
 				71A4CCD31ABF73C700EEF862 /* notes.txt */,
+				7126FBFB1C1DE53200636C9F /* Icons */,
 			);
 			path = Breathe;
 			sourceTree = "<group>";
@@ -190,9 +217,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7126FC021C1DE55A00636C9F /* Icon-29@2x.png in Resources */,
 				719264231A8DB4A200BE9490 /* Main.storyboard in Resources */,
 				719264281A8DB4A200BE9490 /* LaunchScreen.xib in Resources */,
+				7126FC041C1DE55A00636C9F /* Icon-40@2x.png in Resources */,
+				7126FC031C1DE55A00636C9F /* Icon-29@3x.png in Resources */,
+				7126FC051C1DE55A00636C9F /* Icon-40@3x.png in Resources */,
+				7126FC071C1DE55A00636C9F /* Icon-60@3x.png in Resources */,
 				719264251A8DB4A200BE9490 /* Images.xcassets in Resources */,
+				7126FC061C1DE55A00636C9F /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +324,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -329,7 +362,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
