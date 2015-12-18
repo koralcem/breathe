@@ -1,16 +1,12 @@
+- Figure out launch screen: either something in LaunchScreen.xib, or see if you can use the main storyboard directly
 - Add an intro view? Something like "Follow the bar..."
 
-- Figure out launch screen: either something in LaunchScreen.xib, or see if you can use the main storyboard directly
-
-- Figure out final colors in the UI
-
-- Figure out final timings: defaults, and whether you want to allow up to 15 seconds on sliders
-
-- Make icons: 58x58, 87x87, 80x80, 120x120, 120x120, 180x180
--- are some blurry?
-
+========================================
 - Register as iOS developer
 
 - Look into Test Flight
+Q's for beta testers:
+-- Are icons blurry on your device?
+-- Would a stepper be better than a slider for numbers
 
 - Publish
