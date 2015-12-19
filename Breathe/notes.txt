@@ -1,5 +1,5 @@
-- Figure out launch screen: either something in LaunchScreen.xib, or see if you can use the main storyboard directly
-- Add an intro view? Something like "Follow the bar..."
+- Finish intro screen
+- Copy the intro screen, minus the button, into LaunchScreen.xib
 
 ========================================
 - Register as iOS developer
@@ -8,5 +8,7 @@
 Q's for beta testers:
 -- Are icons blurry on your device?
 -- Would a stepper be better than a slider for numbers
+-- When the app first launches, how soon does the "OK" button appear for you below the intro text? Is it weird?
+-- Is the intro text OK?
 
 - Publish
