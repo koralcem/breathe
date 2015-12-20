@@ -244,10 +244,12 @@
                                     <segue destination="fbH-Gv-Wka" kind="show" id="nGt-em-5tw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe in as the bar rises and out as it falls." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpq-Wm-6k9">
-                                <rect key="frame" x="150" y="180" width="300" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpq-Wm-6k9">
+                                <rect key="frame" x="201" y="180" width="199" height="40"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <string key="text">Breathe in as the bar rises
+and out as it falls.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -261,6 +263,11 @@
                             <constraint firstItem="Zpq-Wm-6k9" firstAttribute="width" secondItem="z0p-Oo-KiW" secondAttribute="width" multiplier="1/2" id="Z3Q-EW-Kes"/>
                             <constraint firstItem="awT-LR-JDP" firstAttribute="centerY" secondItem="z0p-Oo-KiW" secondAttribute="bottom" multiplier="2/3" id="bVl-sD-k0D"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z3Q-EW-Kes"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1YD-Zr-lCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
