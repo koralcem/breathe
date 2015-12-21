@@ -1,6 +1,23 @@
-- Copy the intro screen, minus the button, into LaunchScreen.xib
+- When you get backgrounded and restored, stuff doesn't continue!
+-- Refactor layout stuff out of viewWillAppear into a helper.
+-- Have viewwillappear call helper
+-- Have the breath bar register as an observer for app becoming active, call helper when active
+
 - Final bar calculations, and moving contents of viewDidAppear to viewWillAppear
+
 - Final check
+
+When first launched
+didFinishLaunchingWithOptions
+applicationDidBecomeActive
+
+hitting home button
+applicationWillResignActive
+applicationDidEnterBackground
+
+Coming back without dying:
+applicationWillEnterForeground
+applicationDidBecomeActive
 
 ========================================
 - Register as iOS developer
