@@ -1,9 +1,6 @@
-- When you get backgrounded and restored, stuff doesn't continue!
--- Refactor layout stuff out of viewWillAppear into a helper.
--- Have viewwillappear call helper
--- Have the breath bar register as an observer for app becoming active, call helper when active
-
-- Final bar calculations, and moving contents of viewDidAppear to viewWillAppear
+- Change bar to be collapsed at load time and calcualte final bounds programmatically.
+That way starting code can stay in viewDidAppear (needed because the views are given their final sizes there) but not
+have the jarring initial collapse
 
 - Final check
 

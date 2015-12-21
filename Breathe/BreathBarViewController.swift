@@ -26,25 +26,39 @@ class BreathBarViewController: UIViewController {
 		borderBar.layer.cornerRadius = barCornerRadius
 		
 		breathBar.layer.cornerRadius = barCornerRadius
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "appDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "appWillResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
 	}
-
+	
+	func appDidBecomeActive() {
+		startBreathingAnimation()
+	}
+	
+	func appWillResignActive() {
+		stopBreathingAnimation()
+	}
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
 	
 	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		startBreathingAnimation()
+	}
+	
+	func startBreathingAnimation() {
 		if CGRectIsEmpty(originalFrame) {
 			originalFrame = breathBar.frame
 		}
 		
-		collapseImmediately()	// Breath bar begins from the bottom
+		stopBreathingAnimation()	// Breath bar begins from the bottom
 		expand(0)				// Initial expansion starts immediately
-		
-		super.viewDidAppear(animated)
 	}
 	
-	func collapseImmediately() {
+	func stopBreathingAnimation() {
 		breathBar.layer.removeAllAnimations()
 		breathBar.frame = originalFrame
 		breathBar.frame.size.height = 0
@@ -60,7 +74,7 @@ class BreathBarViewController: UIViewController {
 				if (finished) {
 					self.expand(self.userDefaultForTime(PauseTimeAfterBreathOutKey))
 				} else {
-					self.collapseImmediately()
+					self.stopBreathingAnimation()
 				}
 		})
 	}
@@ -74,7 +88,7 @@ class BreathBarViewController: UIViewController {
 				if (finished) {
 					self.collapse(self.userDefaultForTime(PauseTimeAfterBreathInKey))
 				} else {
-					self.collapseImmediately()
+					self.stopBreathingAnimation()
 				}
 		})
 	}
