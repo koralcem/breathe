@@ -1,5 +1,6 @@
-- Finish intro screen
 - Copy the intro screen, minus the button, into LaunchScreen.xib
+- Final bar calculations, and moving contents of viewDidAppear to viewWillAppear
+- Final check
 
 ========================================
 - Register as iOS developer
