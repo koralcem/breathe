@@ -5,10 +5,13 @@
 - Register as iOS developer
 
 - Look into Test Flight
+
 Q's for beta testers:
 -- Are icons blurry on your device?
 -- Would a stepper be better than a slider for numbers
 -- When the app first launches, how soon does the "OK" button appear for you below the intro text? Is it weird?
 -- Is the intro text OK?
+-- Is the OK button at a comfortable height for your device/thumb combo?
+-- Any other feedback?
 
 - Publish

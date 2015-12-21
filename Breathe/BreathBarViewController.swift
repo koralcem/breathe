@@ -33,7 +33,7 @@ class BreathBarViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
-	override func viewWillAppear(animated: Bool) {
+	override func viewDidAppear(animated: Bool) {
 		if CGRectIsEmpty(originalFrame) {
 			originalFrame = breathBar.frame
 		}
@@ -41,7 +41,7 @@ class BreathBarViewController: UIViewController {
 		collapseImmediately()	// Breath bar begins from the bottom
 		expand(0)				// Initial expansion starts immediately
 		
-		super.viewWillAppear(animated)
+		super.viewDidAppear(animated)
 	}
 	
 	func collapseImmediately() {
