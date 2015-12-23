@@ -4,18 +4,6 @@ have the jarring initial collapse
 
 - Final check
 
-When first launched
-didFinishLaunchingWithOptions
-applicationDidBecomeActive
-
-hitting home button
-applicationWillResignActive
-applicationDidEnterBackground
-
-Coming back without dying:
-applicationWillEnterForeground
-applicationDidBecomeActive
-
 ========================================
 - Register as iOS developer
 
