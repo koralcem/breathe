@@ -39,11 +39,6 @@ class BreathBarViewController: UIViewController {
 		stopBreathingAnimation()
 	}
 	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-	
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		startBreathingAnimation()
@@ -55,7 +50,7 @@ class BreathBarViewController: UIViewController {
 		}
 		
 		stopBreathingAnimation()	// Breath bar begins from the bottom
-		expand(0)				// Initial expansion starts immediately
+		expand(0)					// Initial expansion starts immediately
 	}
 	
 	func stopBreathingAnimation() {
