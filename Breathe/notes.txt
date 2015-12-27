@@ -1,6 +1,3 @@
-- See if you can stop breathing animation *after* you're off the screen
-
-========================================
 - Register as iOS developer
 
 - Look into Test Flight
