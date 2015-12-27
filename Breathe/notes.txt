@@ -1,8 +1,4 @@
-- Change bar to be collapsed at load time and calcualte final bounds programmatically.
-That way starting code can stay in viewDidAppear (needed because the views are given their final sizes there) but not
-have the jarring initial collapse
-
-- Final check
+- See if you can stop breathing animation *after* you're off the screen
 
 ========================================
 - Register as iOS developer

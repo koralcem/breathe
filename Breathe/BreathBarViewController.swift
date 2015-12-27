@@ -62,6 +62,7 @@ class BreathBarViewController: UIViewController {
 	
 	func startBreathingAnimation() {
 		stopBreathingAnimation()	// Breath bar begins from the bottom
+		breathBar.hidden = false
 		expand(0)					// Initial expansion starts immediately
 	}
 	
@@ -94,17 +95,6 @@ class BreathBarViewController: UIViewController {
 					self.stopBreathingAnimation()
 				}
 		})
-	}
-	
-	func debugCGRect(rect: CGRect, name: String) {
-		print("\(name)\n\tOrigin: x=\(rect.origin.x), y=\(rect.origin.y)\n\tSize: width=\(rect.size.width), height=\(rect.size.height)")
-	}
-	
-	func printDebugInfo() {
-		//debugCGRect(borderBar.frame, name: "Border")
-		debugCGRect(breathBar.frame, name: "Breath")
-		//debugCGRect(emptyBreathBarFrame, name: "Empty frame")
-		//debugCGRect(fullBreathBarFrame, name: "Full frame")
 	}
 	
 	func userDefaultForTime(userDefaultsKey: String) -> Double {
