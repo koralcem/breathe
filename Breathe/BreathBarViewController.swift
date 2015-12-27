@@ -31,14 +31,14 @@ class BreathBarViewController: UIViewController {
 		breathBar.layer.cornerRadius = barCornerRadius
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "appDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "appWillResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "appDidEnterBackground", name: UIApplicationDidEnterBackgroundNotification, object: nil)
 	}
 	
 	func appDidBecomeActive() {
 		startBreathingAnimation()
 	}
 	
-	func appWillResignActive() {
+	func appDidEnterBackground() {
 		stopBreathingAnimation()
 	}
 	
