@@ -1,6 +1,6 @@
-- Register as iOS developer
-
-- Look into Test Flight
+- Generate whatever profiles necessary to be able to test on your own iPhone 4s
+- if all checks out, upload build to iTunes Connect
+- Send out beta via Test Flight
 
 Q's for beta testers:
 -- Are icons blurry on your device?
