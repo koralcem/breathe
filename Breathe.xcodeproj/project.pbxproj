@@ -40,7 +40,7 @@
 		44D0ACAC1C25F36100EDF02A /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		44D0ACAD1C25F36100EDF02A /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		713FB4F51A9EC86D00F5E1E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		719264181A8DB4A200BE9490 /* Breathe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breathe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		719264181A8DB4A200BE9490 /* Just Breathe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Breathe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7192641C1A8DB4A200BE9490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7192641D1A8DB4A200BE9490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7192641F1A8DB4A200BE9490 /* BreathBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathBarViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		719264191A8DB4A200BE9490 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				719264181A8DB4A200BE9490 /* Breathe.app */,
+				719264181A8DB4A200BE9490 /* Just Breathe.app */,
 				7192642D1A8DB4A200BE9490 /* BreatheTests.xctest */,
 			);
 			name = Products;
@@ -139,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		719264171A8DB4A200BE9490 /* Breathe */ = {
+		719264171A8DB4A200BE9490 /* Just Breathe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 719264371A8DB4A200BE9490 /* Build configuration list for PBXNativeTarget "Breathe" */;
+			buildConfigurationList = 719264371A8DB4A200BE9490 /* Build configuration list for PBXNativeTarget "Just Breathe" */;
 			buildPhases = (
 				719264141A8DB4A200BE9490 /* Sources */,
 				719264151A8DB4A200BE9490 /* Frameworks */,
@@ -151,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = Breathe;
+			name = "Just Breathe";
 			productName = Breathe;
-			productReference = 719264181A8DB4A200BE9490 /* Breathe.app */;
+			productReference = 719264181A8DB4A200BE9490 /* Just Breathe.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7192642C1A8DB4A200BE9490 /* BreatheTests */ = {
@@ -186,6 +186,7 @@
 				TargetAttributes = {
 					719264171A8DB4A200BE9490 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7663MB9YK3;
 					};
 					7192642C1A8DB4A200BE9490 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -206,7 +207,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				719264171A8DB4A200BE9490 /* Breathe */,
+				719264171A8DB4A200BE9490 /* Just Breathe */,
 				7192642C1A8DB4A200BE9490 /* BreatheTests */,
 			);
 		};
@@ -262,7 +263,7 @@
 /* Begin PBXTargetDependency section */
 		7192642F1A8DB4A200BE9490 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 719264171A8DB4A200BE9490 /* Breathe */;
+			target = 719264171A8DB4A200BE9490 /* Just Breathe */;
 			targetProxy = 7192642E1A8DB4A200BE9490 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -373,9 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Koral Oztan Schemel (QMUCYXTG76)";
 				INFOPLIST_FILE = Breathe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Lunar-Labs.Breathe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lunar-Labs.Just-Breathe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -385,9 +387,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Koral Oztan Schemel (7663MB9YK3)";
 				INFOPLIST_FILE = Breathe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Lunar-Labs.Breathe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lunar-Labs.Just-Breathe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -441,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		719264371A8DB4A200BE9490 /* Build configuration list for PBXNativeTarget "Breathe" */ = {
+		719264371A8DB4A200BE9490 /* Build configuration list for PBXNativeTarget "Just Breathe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				719264381A8DB4A200BE9490 /* Debug */,
