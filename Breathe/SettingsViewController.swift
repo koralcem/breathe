@@ -35,21 +35,18 @@ class SettingsViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
-	override func viewDidAppear(animated: Bool) {
-	}
-	
 	@IBAction func sliderValueChanged(sender: UISlider) {
-		durationValueChanged(sender)
+        durationValueChanged(slider: sender)
 	}
 	@IBAction func sliderTouchUpInside(sender: UISlider) {
-		durationValueChanged(sender, snapSlider:true)
+        durationValueChanged(slider: sender, snapSlider:true)
 	}
 	
 	func durationValueChanged(slider: UISlider, snapSlider: Bool = false) {
 		let newValue = Int(round(slider.value))
-		let index = sliders.indexOf(slider)
-		labels[index!].text = labelTextForDuration(newValue)
-		NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey:userDefaultsKeys[index!])
+        let index = sliders.index(of: slider)
+        labels[index!].text = labelTextForDuration(duration: newValue)
+        UserDefaults.standard.set(newValue, forKey:userDefaultsKeys[index!])
 		
 		if snapSlider {
 			slider.value = Float(newValue)
@@ -57,9 +54,9 @@ class SettingsViewController: UIViewController {
 	}
 	
 	func refreshInterface() {
-		for (index, defaultKey) in userDefaultsKeys.enumerate() {
-			let value = NSUserDefaults.standardUserDefaults().integerForKey(defaultKey)
-			labels[index].text = labelTextForDuration(value)
+        for (index, defaultKey) in userDefaultsKeys.enumerated() {
+            let value = UserDefaults.standard.integer(forKey: defaultKey)
+            labels[index].text = labelTextForDuration(duration: value)
 			sliders[index].value = Float(value)
 		}
 	}
