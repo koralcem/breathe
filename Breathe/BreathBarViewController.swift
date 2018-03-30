@@ -16,7 +16,7 @@ class BreathBarViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+
         UserDefaults.standard.register(defaults: [BreatheInTimeKey:3,
                                                   PauseTimeAfterBreathInKey:1,
                                                   BreatheOutTimeKey: 4,
@@ -30,8 +30,8 @@ class BreathBarViewController: UIViewController {
 		
 		breathBar.layer.cornerRadius = barCornerRadius
 		
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
 	}
 	
 	@objc func appDidBecomeActive() {
@@ -63,7 +63,7 @@ class BreathBarViewController: UIViewController {
 	func startBreathingAnimation() {
 		stopBreathingAnimation()	// Breath bar begins from the bottom
 		breathBar.isHidden = false
-        expand(delay: 0)					// Initial expansion starts immediately
+        expand(afterDelay: 0)					// Initial expansion starts immediately
 	}
 	
 	func stopBreathingAnimation() {
@@ -71,26 +71,25 @@ class BreathBarViewController: UIViewController {
 		breathBar.frame = emptyBreathBarFrame
 	}
 	
-	func collapse(delay: TimeInterval) {
+	func collapse(afterDelay delay: TimeInterval) {
         UIView.animate(withDuration: userDefaultForTime(userDefaultsKey: BreatheOutTimeKey), delay: delay, options: .curveLinear, animations: {
 			self.breathBar.frame = self.emptyBreathBarFrame
 			
 			}, completion: { finished in
 				if (finished) {
-                    self.expand(delay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathOutKey))
+                    self.expand(afterDelay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathOutKey))
 				} else {
 					self.stopBreathingAnimation()
 				}
 		})
 	}
 	
-	func expand(delay: TimeInterval) {
+	func expand(afterDelay delay: TimeInterval) {
         UIView.animate(withDuration: userDefaultForTime(userDefaultsKey: BreatheInTimeKey), delay: delay, options: .curveLinear, animations: {
-			self.breathBar.frame = self.fullBreathBarFrame
-			
+                self.breathBar.frame = self.fullBreathBarFrame
 			}, completion: { finished in
 				if (finished) {
-                    self.collapse(delay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathInKey))
+                    self.collapse(afterDelay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathInKey))
 				} else {
 					self.stopBreathingAnimation()
 				}
