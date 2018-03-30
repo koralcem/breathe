@@ -85,11 +85,11 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ttg-K7-Nog">
                                 <rect key="frame" x="14" y="101" width="347" height="31"/>
                                 <connections>
-                                    <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="Kok-Rc-xvI"/>
-                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="wL4-cq-Seo"/>
+                                    <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="l5f-VE-94B"/>
+                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="6gC-JO-Qc6"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause after breath in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmA-y6-rAC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause after breath in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmA-y6-rAC" userLabel="Pause After Breath In">
                                 <rect key="frame" x="16" y="139" width="159" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,7 +105,7 @@
                                 <rect key="frame" x="14" y="168" width="347" height="31"/>
                                 <connections>
                                     <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="lrJ-rl-kXI"/>
-                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="0Lz-yb-cmU"/>
+                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="Fzk-mf-7o5"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQP-DZ-rQ4">
@@ -124,7 +124,7 @@
                                 <rect key="frame" x="14" y="235" width="347" height="31"/>
                                 <connections>
                                     <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="oyM-zZ-ye2"/>
-                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="Gbf-f3-Na5"/>
+                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="qeQ-6u-bMn"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause after breath out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weA-6r-QcZ">
@@ -143,7 +143,7 @@
                                 <rect key="frame" x="14" y="302" width="347" height="31"/>
                                 <connections>
                                     <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="9N4-Fo-uNc"/>
-                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="HPC-wr-pqf"/>
+                                    <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="SSD-oL-KFG"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-yw-Y6u">
@@ -197,13 +197,17 @@
                     </view>
                     <connections>
                         <outlet property="BreatheInTimeLabel" destination="HeO-l5-RYR" id="iHA-X9-vt5"/>
-                        <outlet property="BreatheInTimeSlider" destination="Ttg-K7-Nog" id="SOz-Me-B28"/>
                         <outlet property="BreatheOutTimeLabel" destination="TvV-iF-Vn6" id="id8-Qk-8Ij"/>
-                        <outlet property="BreatheOutTimeSlider" destination="zdr-dr-c6N" id="Acc-sO-COO"/>
                         <outlet property="PauseAfterBreathInTimeLabel" destination="HIC-P2-YtX" id="IeZ-Bo-qet"/>
                         <outlet property="PauseAfterBreathOutTimeLabel" destination="PBt-cf-SF4" id="aDy-hu-WIr"/>
-                        <outlet property="PauseAfterBreathOutTimeSlider" destination="HSp-d1-Kt8" id="PfQ-yf-qoU"/>
-                        <outlet property="PauseAfterBreatheInTimeSlider" destination="DQM-fL-VYj" id="vff-bZ-5rM"/>
+                        <outlet property="breatheInTimeLabel" destination="HeO-l5-RYR" id="sRx-6h-jS0"/>
+                        <outlet property="breatheInTimeSlider" destination="Ttg-K7-Nog" id="hhe-mL-4lT"/>
+                        <outlet property="breatheOutTimeLabel" destination="TvV-iF-Vn6" id="WHk-GE-H2s"/>
+                        <outlet property="breatheOutTimeSlider" destination="zdr-dr-c6N" id="nf3-I4-TqC"/>
+                        <outlet property="pauseAfterBreathInTimeLabel" destination="HIC-P2-YtX" id="JMo-cT-Lin"/>
+                        <outlet property="pauseAfterBreathOutTimeLabel" destination="PBt-cf-SF4" id="LnT-pi-wZB"/>
+                        <outlet property="pauseAfterBreathOutTimeSlider" destination="HSp-d1-Kt8" id="sFx-RI-z0g"/>
+                        <outlet property="pauseAfterBreatheInTimeSlider" destination="DQM-fL-VYj" id="cde-13-rEa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyw-0F-3Uy" userLabel="First Responder" sceneMemberID="firstResponder"/>

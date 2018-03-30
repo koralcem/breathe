@@ -34,13 +34,15 @@ class SettingsViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	
-	@IBAction func sliderValueChanged(sender: UISlider) {
+
+
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
         durationValueChanged(slider: sender)
-	}
-	@IBAction func sliderTouchUpInside(sender: UISlider) {
+    }
+
+    @IBAction func sliderTouchUpInside(_ sender: UISlider) {
         durationValueChanged(slider: sender, snapSlider:true)
-	}
+    }
 	
 	func durationValueChanged(slider: UISlider, snapSlider: Bool = false) {
 		let newValue = Int(round(slider.value))
