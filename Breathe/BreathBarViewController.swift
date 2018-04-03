@@ -52,9 +52,9 @@ class BreathBarViewController: UIViewController {
                                     width: breathBarWidth,
                                     height: borderBar.frame.size.height - 2 * breathBarPadding)
 		
-        emptyBreathBarFrame = CGRect(x: breathBarPadding,
-                                     y: borderBar.frame.size.height - breathBarPadding,
-                                     width: breathBarWidth,
+        emptyBreathBarFrame = CGRect(x: borderBar.frame.size.width / 2,
+                                     y: borderBar.frame.size.height / 2,
+                                     width: 0,
                                      height: 0)
 		
 		startBreathingAnimation()
