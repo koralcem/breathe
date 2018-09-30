@@ -30,8 +30,8 @@ class BreathBarViewController: UIViewController {
 		
 		breathBar.layer.cornerRadius = barCornerRadius
 		
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
 	}
 	
 	@objc func appDidBecomeActive() {
