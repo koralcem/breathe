@@ -17,9 +17,9 @@ struct ContentView: View {
                 Text("Pause after breath in: \(settings.pauseAfterBreathIn)")
                 Text("Breath out: \(settings.breathOut)")
                 Text("Pause after breath out: \(settings.pauseAfterBreathOut)")
-            }.navigationBarItems(trailing:
-                NavigationLink("Timings", destination: TimingsView(settings: $settings))
-            )
+            }
+            .navigationBarTitle("Breathe")
+            .navigationBarItems(trailing: NavigationLink("Timing", destination: TimingsView(settings: $settings)))
         }
     }
 }
@@ -34,7 +34,7 @@ struct TimingsView: View {
     @Binding var settings: BreathTimingSettings
 
     var body: some View {
-        VStack {
+        Form {
             Stepper(value: $settings.breathIn, in: 1...10) {
                 Text("Breath in: \(settings.breathIn) seconds")
             }
@@ -48,5 +48,6 @@ struct TimingsView: View {
                 Text("Pause after breath out: \(settings.pauseAfterBreathOut) seconds")
             }
         }
+        .navigationBarTitle("Timing")
     }
 }
