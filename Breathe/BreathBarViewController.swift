@@ -3,35 +3,23 @@ import UIKit
 class BreathBarViewController: UIViewController {
 	@IBOutlet weak var breathBar: UIView!
 	@IBOutlet weak var borderBar: UIView!
-	
+    @IBOutlet weak var breathBarTopConstraint: NSLayoutConstraint!
+
 	let breathBarPadding: CGFloat = 20
-	
-	// There seems to be no IB attributes for these
-	let borderBarWidth: CGFloat = 10
-	let borderBarColor = UIColor.blue.cgColor
-	let barCornerRadius: CGFloat = 5
-	
-	var fullBreathBarFrame: CGRect = CGRect()
-	var emptyBreathBarFrame: CGRect = CGRect()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-        UserDefaults.standard.register(defaults: [BreatheInTimeKey:3,
+        UserDefaults.standard.register(defaults: [BreatheInTimeKey:4,
                                                   PauseTimeAfterBreathInKey:1,
-                                                  BreatheOutTimeKey: 4,
+                                                  BreatheOutTimeKey: 6,
                                                   PauseTimeAfterBreathOutKey: 1])
 		
 		// setup the attributes of the bars that can't be adjusted from IB
-		borderBar.backgroundColor = UIColor.white
-		borderBar.layer.borderColor = borderBarColor
-		borderBar.layer.borderWidth = borderBarWidth
-		borderBar.layer.cornerRadius = barCornerRadius
+		borderBar.layer.borderColor = UIColor.blue.cgColor
 		
-		breathBar.layer.cornerRadius = barCornerRadius
-		
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
 	}
 	
 	@objc func appDidBecomeActive() {
@@ -44,37 +32,26 @@ class BreathBarViewController: UIViewController {
 	
     override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		
-		let breathBarWidth = borderBar.frame.size.width - 2 * breathBarPadding
 
-        fullBreathBarFrame = CGRect(x: breathBarPadding,
-                                    y: breathBarPadding,
-                                    width: breathBarWidth,
-                                    height: borderBar.frame.size.height - 2 * breathBarPadding)
-		
-        emptyBreathBarFrame = CGRect(x: breathBarPadding,
-                                     y: borderBar.frame.size.height - breathBarPadding,
-                                     width: breathBarWidth,
-                                     height: 0)
-		
 		startBreathingAnimation()
 	}
 	
 	func startBreathingAnimation() {
 		stopBreathingAnimation()	// Breath bar begins from the bottom
-		breathBar.isHidden = false
-        expand(afterDelay: 0)					// Initial expansion starts immediately
+        breathBar.isHidden = false
+        expand(afterDelay: 0)	// Initial expansion starts immediately
 	}
 	
 	func stopBreathingAnimation() {
 		breathBar.layer.removeAllAnimations()
-		breathBar.frame = emptyBreathBarFrame
+        breathBarTopConstraint.constant = self.borderBar.frame.height - self.breathBarPadding
+        view.layoutIfNeeded()
 	}
 	
 	func collapse(afterDelay delay: TimeInterval) {
         UIView.animate(withDuration: userDefaultForTime(userDefaultsKey: BreatheOutTimeKey), delay: delay, options: .curveLinear, animations: {
-			self.breathBar.frame = self.emptyBreathBarFrame
-			
+            self.breathBarTopConstraint.constant = self.borderBar.frame.height - self.breathBarPadding
+            self.view.layoutIfNeeded()
 			}, completion: { finished in
 				if (finished) {
                     self.expand(afterDelay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathOutKey))
@@ -86,7 +63,8 @@ class BreathBarViewController: UIViewController {
 	
 	func expand(afterDelay delay: TimeInterval) {
         UIView.animate(withDuration: userDefaultForTime(userDefaultsKey: BreatheInTimeKey), delay: delay, options: .curveLinear, animations: {
-                self.breathBar.frame = self.fullBreathBarFrame
+            self.breathBarTopConstraint.constant = self.breathBarPadding
+            self.view.layoutIfNeeded()
 			}, completion: { finished in
 				if (finished) {
                     self.collapse(afterDelay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathInKey))

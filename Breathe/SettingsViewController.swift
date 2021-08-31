@@ -40,7 +40,7 @@ class SettingsViewController: UIViewController {
 	
 	func durationValueChanged(slider: UISlider, snapSlider: Bool = false) {
 		let newValue = Int(round(slider.value))
-        let index = sliders.index(of: slider)
+        let index = sliders.firstIndex(of: slider)
         labels[index!].text = labelTextForDuration(duration: newValue)
         UserDefaults.standard.set(newValue, forKey:userDefaultsKeys[index!])
 		
