@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,18 +19,7 @@
 		719264231A8DB4A200BE9490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719264211A8DB4A200BE9490 /* Main.storyboard */; };
 		719264251A8DB4A200BE9490 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719264241A8DB4A200BE9490 /* Images.xcassets */; };
 		719264281A8DB4A200BE9490 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719264261A8DB4A200BE9490 /* LaunchScreen.xib */; };
-		719264341A8DB4A200BE9490 /* BreatheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719264331A8DB4A200BE9490 /* BreatheTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7192642E1A8DB4A200BE9490 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 719264101A8DB4A200BE9490 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 719264171A8DB4A200BE9490;
-			remoteInfo = Breathe;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		44D0ACA81C25F36100EDF02A /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@2x.png"; sourceTree = "<group>"; };
@@ -47,20 +36,11 @@
 		719264221A8DB4A200BE9490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		719264241A8DB4A200BE9490 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		719264271A8DB4A200BE9490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7192642D1A8DB4A200BE9490 /* BreatheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreatheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		719264321A8DB4A200BE9490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		719264331A8DB4A200BE9490 /* BreatheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheTests.swift; sourceTree = "<group>"; };
+		B2B7934426DDCDCB003AD1DA /* notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = notes.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		719264151A8DB4A200BE9490 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7192642A1A8DB4A200BE9490 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,8 +67,8 @@
 		7192640F1A8DB4A200BE9490 = {
 			isa = PBXGroup;
 			children = (
+				B2B7934426DDCDCB003AD1DA /* notes.md */,
 				7192641A1A8DB4A200BE9490 /* Breathe */,
-				719264301A8DB4A200BE9490 /* BreatheTests */,
 				719264191A8DB4A200BE9490 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				719264181A8DB4A200BE9490 /* Smooth Breath.app */,
-				7192642D1A8DB4A200BE9490 /* BreatheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,23 +94,6 @@
 				7126FBFB1C1DE53200636C9F /* Icons */,
 			);
 			path = Breathe;
-			sourceTree = "<group>";
-		};
-		719264301A8DB4A200BE9490 /* BreatheTests */ = {
-			isa = PBXGroup;
-			children = (
-				719264331A8DB4A200BE9490 /* BreatheTests.swift */,
-				719264311A8DB4A200BE9490 /* Supporting Files */,
-			);
-			path = BreatheTests;
-			sourceTree = "<group>";
-		};
-		719264311A8DB4A200BE9490 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				719264321A8DB4A200BE9490 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,24 +116,6 @@
 			productReference = 719264181A8DB4A200BE9490 /* Smooth Breath.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7192642C1A8DB4A200BE9490 /* BreatheTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7192643A1A8DB4A200BE9490 /* Build configuration list for PBXNativeTarget "BreatheTests" */;
-			buildPhases = (
-				719264291A8DB4A200BE9490 /* Sources */,
-				7192642A1A8DB4A200BE9490 /* Frameworks */,
-				7192642B1A8DB4A200BE9490 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7192642F1A8DB4A200BE9490 /* PBXTargetDependency */,
-			);
-			name = BreatheTests;
-			productName = BreatheTests;
-			productReference = 7192642D1A8DB4A200BE9490 /* BreatheTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,17 +130,14 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 7663MB9YK3;
 					};
-					7192642C1A8DB4A200BE9490 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 719264171A8DB4A200BE9490;
-					};
 				};
 			};
 			buildConfigurationList = 719264131A8DB4A200BE9490 /* Build configuration list for PBXProject "Breathe" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -206,7 +147,6 @@
 			projectRoot = "";
 			targets = (
 				719264171A8DB4A200BE9490 /* Smooth Breath */,
-				7192642C1A8DB4A200BE9490 /* BreatheTests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,13 +168,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7192642B1A8DB4A200BE9490 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -248,23 +181,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		719264291A8DB4A200BE9490 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				719264341A8DB4A200BE9490 /* BreatheTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7192642F1A8DB4A200BE9490 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 719264171A8DB4A200BE9490 /* Smooth Breath */;
-			targetProxy = 7192642E1A8DB4A200BE9490 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		719264211A8DB4A200BE9490 /* Main.storyboard */ = {
@@ -332,7 +249,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -380,10 +297,11 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -395,7 +313,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Koral Oztan Schemel (QMUCYXTG76)";
 				INFOPLIST_FILE = Breathe/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lunar-Labs.Just-Breathe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -408,46 +329,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Koral Oztan Schemel (7663MB9YK3)";
 				INFOPLIST_FILE = Breathe/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lunar-Labs.Just-Breathe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		7192643B1A8DB4A200BE9490 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BreatheTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Moonworks.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breathe.app/Breathe";
-			};
-			name = Debug;
-		};
-		7192643C1A8DB4A200BE9490 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BreatheTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Moonworks.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breathe.app/Breathe";
 			};
 			name = Release;
 		};
@@ -468,15 +356,6 @@
 			buildConfigurations = (
 				719264381A8DB4A200BE9490 /* Debug */,
 				719264391A8DB4A200BE9490 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7192643A1A8DB4A200BE9490 /* Build configuration list for PBXNativeTarget "BreatheTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7192643B1A8DB4A200BE9490 /* Debug */,
-				7192643C1A8DB4A200BE9490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

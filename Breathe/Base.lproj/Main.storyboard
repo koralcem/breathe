@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8uS-nj-ADG">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8uS-nj-ADG">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,14 +13,14 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" userLabel="Breath Bar" customClass="BreathBarViewController" customModule="Smooth_Breath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-Hq-75E">
-                                <rect key="frame" x="94" y="74" width="187.5" height="583"/>
+                                <rect key="frame" x="94" y="66" width="187.5" height="571"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gU7-AF-QwU">
-                                        <rect key="frame" x="20" y="20" width="147.5" height="543"/>
+                                        <rect key="frame" x="20" y="20" width="147.5" height="531"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
@@ -37,6 +33,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ixV-pB-sgS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ixV-pB-sgS" firstAttribute="centerX" secondItem="nQG-Hq-75E" secondAttribute="centerX" id="0Ir-Mw-Wqz"/>
@@ -44,7 +41,6 @@
                             <constraint firstItem="nQG-Hq-75E" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" id="dRa-Yv-MYB"/>
                             <constraint firstItem="ixV-pB-sgS" firstAttribute="bottom" secondItem="nQG-Hq-75E" secondAttribute="bottom" constant="10" id="shn-ze-oU5"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ixV-pB-sgS"/>
                     </view>
                     <navigationItem key="navigationItem" id="wPH-ld-res">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Lj9-Cq-Haq">
@@ -67,86 +63,87 @@
             <objects>
                 <viewController id="noG-18-2HF" customClass="SettingsViewController" customModule="Smooth_Breath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xBX-IJ-TCe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeO-l5-RYR">
-                                <rect key="frame" x="272" y="64" width="87" height="21"/>
+                                <rect key="frame" x="272" y="56" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ttg-K7-Nog">
-                                <rect key="frame" x="14" y="93" width="347" height="31"/>
+                                <rect key="frame" x="14" y="85" width="347" height="31"/>
                                 <connections>
                                     <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="l5f-VE-94B"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="6gC-JO-Qc6"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause after breath in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmA-y6-rAC" userLabel="Pause After Breath In">
-                                <rect key="frame" x="16" y="131" width="159" height="21"/>
+                                <rect key="frame" x="16" y="123" width="157.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIC-P2-YtX">
-                                <rect key="frame" x="272" y="131" width="87" height="21"/>
+                                <rect key="frame" x="272" y="123" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-fL-VYj">
-                                <rect key="frame" x="14" y="160" width="347" height="31"/>
+                                <rect key="frame" x="14" y="152" width="347" height="31"/>
                                 <connections>
                                     <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="lrJ-rl-kXI"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="Fzk-mf-7o5"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQP-DZ-rQ4">
-                                <rect key="frame" x="16" y="198" width="90" height="21"/>
+                                <rect key="frame" x="16" y="190" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvV-iF-Vn6">
-                                <rect key="frame" x="272" y="198" width="87" height="21"/>
+                                <rect key="frame" x="272" y="190" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="zdr-dr-c6N">
-                                <rect key="frame" x="14" y="227" width="347" height="31"/>
+                                <rect key="frame" x="14" y="219" width="347" height="31"/>
                                 <connections>
                                     <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="oyM-zZ-ye2"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="qeQ-6u-bMn"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause after breath out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weA-6r-QcZ">
-                                <rect key="frame" x="16" y="265" width="171" height="21"/>
+                                <rect key="frame" x="16" y="257" width="169.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBt-cf-SF4">
-                                <rect key="frame" x="272" y="265" width="87" height="21"/>
+                                <rect key="frame" x="272" y="257" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="HSp-d1-Kt8">
-                                <rect key="frame" x="14" y="294" width="347" height="31"/>
+                                <rect key="frame" x="14" y="286" width="347" height="31"/>
                                 <connections>
                                     <action selector="sliderTouchUpInside:" destination="noG-18-2HF" eventType="touchUpInside" id="9N4-Fo-uNc"/>
                                     <action selector="sliderValueChanged:" destination="noG-18-2HF" eventType="valueChanged" id="SSD-oL-KFG"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-yw-Y6u">
-                                <rect key="frame" x="16" y="64" width="78" height="21"/>
+                                <rect key="frame" x="16" y="56" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="8pj-Ym-0yU"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ttg-K7-Nog" firstAttribute="trailing" secondItem="xBX-IJ-TCe" secondAttribute="trailingMargin" id="0Dj-eq-bZj"/>
@@ -165,7 +162,7 @@
                             <constraint firstItem="DQM-fL-VYj" firstAttribute="leading" secondItem="xBX-IJ-TCe" secondAttribute="leadingMargin" id="IKn-2D-Esx"/>
                             <constraint firstItem="HeO-l5-RYR" firstAttribute="trailing" secondItem="xBX-IJ-TCe" secondAttribute="trailingMargin" id="JIe-66-sUC"/>
                             <constraint firstItem="DQM-fL-VYj" firstAttribute="top" secondItem="mmA-y6-rAC" secondAttribute="bottom" constant="8" symbolic="YES" id="KUs-Id-lkc"/>
-                            <constraint firstItem="JPQ-yw-Y6u" firstAttribute="top" secondItem="8pj-Ym-0yU" secondAttribute="top" constant="8" symbolic="YES" id="Kcu-pP-pSS"/>
+                            <constraint firstItem="JPQ-yw-Y6u" firstAttribute="top" secondItem="8pj-Ym-0yU" secondAttribute="top" symbolic="YES" id="Kcu-pP-pSS"/>
                             <constraint firstItem="PBt-cf-SF4" firstAttribute="top" secondItem="zdr-dr-c6N" secondAttribute="bottom" constant="8" symbolic="YES" id="LYy-SM-GBz"/>
                             <constraint firstItem="TvV-iF-Vn6" firstAttribute="trailing" secondItem="xBX-IJ-TCe" secondAttribute="trailingMargin" id="Li7-Dp-5uO"/>
                             <constraint firstItem="TvV-iF-Vn6" firstAttribute="top" secondItem="DQM-fL-VYj" secondAttribute="bottom" constant="8" symbolic="YES" id="Obz-7v-OqI"/>
@@ -183,7 +180,6 @@
                             <constraint firstItem="weA-6r-QcZ" firstAttribute="top" secondItem="zdr-dr-c6N" secondAttribute="bottom" constant="8" symbolic="YES" id="vjg-ap-aRk"/>
                             <constraint firstItem="mmA-y6-rAC" firstAttribute="top" secondItem="Ttg-K7-Nog" secondAttribute="bottom" constant="8" symbolic="YES" id="w01-df-Oxy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8pj-Ym-0yU"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Tj5-6m-16O"/>
@@ -217,7 +213,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awT-LR-JDP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awT-LR-JDP">
                                 <rect key="frame" x="153.5" y="422.5" width="68" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
@@ -227,7 +223,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpq-Wm-6k9">
-                                <rect key="frame" x="76" y="198.5" width="223" height="48"/>
+                                <rect key="frame" x="74.5" y="198.5" width="226.5" height="48"/>
                                 <string key="text">Breathe in as the bar rises
 and out as it falls.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -235,6 +231,7 @@ and out as it falls.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="1kI-O1-dll"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zpq-Wm-6k9" firstAttribute="centerX" secondItem="1kI-O1-dll" secondAttribute="centerX" id="1CI-4d-Nge"/>
@@ -242,7 +239,6 @@ and out as it falls.</string>
                             <constraint firstItem="Zpq-Wm-6k9" firstAttribute="centerY" secondItem="z0p-Oo-KiW" secondAttribute="bottom" multiplier="1/3" id="QND-8c-uMg"/>
                             <constraint firstItem="awT-LR-JDP" firstAttribute="centerY" secondItem="z0p-Oo-KiW" secondAttribute="bottom" multiplier="2/3" id="bVl-sD-k0D"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="1kI-O1-dll"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1YD-Zr-lCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,10 +248,10 @@ and out as it falls.</string>
         <!--Navigation Controller-->
         <scene sceneID="oZT-uk-jFE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fbH-Gv-Wka" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fbH-Gv-Wka" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5RS-qm-xEC">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
