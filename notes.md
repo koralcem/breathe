@@ -1,7 +1,9 @@
-- Switch to using stack views in the settings pane
-vertical stack w/ 4 children, one for each setting. For each setting:
-  vertical stack with 2 children, one for the label row, another for the slider.
-    the one for the label row is a horizontal stack view, which pushes labels apart.
+- Check whether sliders in settings feel good on an actual device
+- Consider iPad support
+- Check what version and build is on app store.
+  - might need to bump marketing version and build number
 
-- switch to using, and animating constraints
-https://stackoverflow.com/a/12664093/3943106
+Updates:
+- Dark mode support
+- iPad support (if you actually do it)
+- Other updates for iOS 14  

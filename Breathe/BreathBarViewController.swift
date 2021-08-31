@@ -18,8 +18,8 @@ class BreathBarViewController: UIViewController {
 		// setup the attributes of the bars that can't be adjusted from IB
 		borderBar.layer.borderColor = UIColor.blue.cgColor
 		
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(BreathBarViewController.appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
 	}
 	
 	@objc func appDidBecomeActive() {
@@ -44,17 +44,17 @@ class BreathBarViewController: UIViewController {
 	
 	func stopBreathingAnimation() {
 		breathBar.layer.removeAllAnimations()
-        breathBarTopConstraint.constant = self.borderBar.frame.height - self.breathBarPadding
+        breathBarTopConstraint.constant = borderBar.frame.height - breathBarPadding
         view.layoutIfNeeded()
 	}
 	
 	func collapse(afterDelay delay: TimeInterval) {
-        UIView.animate(withDuration: userDefaultForTime(userDefaultsKey: BreatheOutTimeKey), delay: delay, options: .curveLinear, animations: {
+        UIView.animate(withDuration: userDefault(for: BreatheOutTimeKey), delay: delay, options: .curveLinear, animations: {
             self.breathBarTopConstraint.constant = self.borderBar.frame.height - self.breathBarPadding
             self.view.layoutIfNeeded()
 			}, completion: { finished in
 				if (finished) {
-                    self.expand(afterDelay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathOutKey))
+                    self.expand(afterDelay: self.userDefault(for: PauseTimeAfterBreathOutKey))
 				} else {
 					self.stopBreathingAnimation()
 				}
@@ -62,20 +62,20 @@ class BreathBarViewController: UIViewController {
 	}
 	
 	func expand(afterDelay delay: TimeInterval) {
-        UIView.animate(withDuration: userDefaultForTime(userDefaultsKey: BreatheInTimeKey), delay: delay, options: .curveLinear, animations: {
+        UIView.animate(withDuration: userDefault(for: BreatheInTimeKey), delay: delay, options: .curveLinear, animations: {
             self.breathBarTopConstraint.constant = self.breathBarPadding
             self.view.layoutIfNeeded()
 			}, completion: { finished in
 				if (finished) {
-                    self.collapse(afterDelay: self.userDefaultForTime(userDefaultsKey: PauseTimeAfterBreathInKey))
+                    self.collapse(afterDelay: self.userDefault(for: PauseTimeAfterBreathInKey))
 				} else {
 					self.stopBreathingAnimation()
 				}
 		})
 	}
 	
-	func userDefaultForTime(userDefaultsKey: String) -> Double {
-        return Double(UserDefaults.standard.integer(forKey: userDefaultsKey))
+	func userDefault(for key: String) -> Double {
+        return Double(UserDefaults.standard.integer(forKey: key))
 	}
 }
 
