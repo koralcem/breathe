@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-Hq-75E">
-                                <rect key="frame" x="94" y="66" width="187.5" height="571"/>
+                                <rect key="frame" x="94" y="85.5" width="187.5" height="532"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gU7-AF-QwU">
-                                        <rect key="frame" x="20" y="20" width="147.5" height="531"/>
+                                        <rect key="frame" x="20" y="20" width="147.5" height="492"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -36,6 +36,8 @@
                                     <constraint firstItem="gU7-AF-QwU" firstAttribute="leading" secondItem="nQG-Hq-75E" secondAttribute="leading" constant="20" id="7os-Ug-Vyw"/>
                                     <constraint firstItem="gU7-AF-QwU" firstAttribute="top" secondItem="nQG-Hq-75E" secondAttribute="top" constant="20" id="GIU-ke-DqJ"/>
                                     <constraint firstAttribute="bottom" secondItem="gU7-AF-QwU" secondAttribute="bottom" constant="20" id="LY9-dL-g9X"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="600" id="PcT-AP-BWh"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="PtG-Rv-5V9"/>
                                     <constraint firstAttribute="trailing" secondItem="gU7-AF-QwU" secondAttribute="trailing" constant="20" id="c19-aT-TyY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -52,9 +54,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ixV-pB-sgS" firstAttribute="centerX" secondItem="nQG-Hq-75E" secondAttribute="centerX" id="0Ir-Mw-Wqz"/>
-                            <constraint firstItem="nQG-Hq-75E" firstAttribute="top" secondItem="ixV-pB-sgS" secondAttribute="top" constant="10" id="WiD-Ro-SAI"/>
-                            <constraint firstItem="nQG-Hq-75E" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" id="dRa-Yv-MYB"/>
-                            <constraint firstItem="ixV-pB-sgS" firstAttribute="bottom" secondItem="nQG-Hq-75E" secondAttribute="bottom" constant="10" id="shn-ze-oU5"/>
+                            <constraint firstItem="nQG-Hq-75E" firstAttribute="centerY" secondItem="ixV-pB-sgS" secondAttribute="centerY" id="chB-xw-dzU"/>
+                            <constraint firstItem="nQG-Hq-75E" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" priority="750" id="dRa-Yv-MYB"/>
+                            <constraint firstItem="nQG-Hq-75E" firstAttribute="height" secondItem="ixV-pB-sgS" secondAttribute="height" multiplier="0.9" priority="750" id="lXR-3i-ofu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wPH-ld-res">
@@ -204,6 +206,7 @@
                             <constraint firstItem="7P4-ke-oMB" firstAttribute="top" secondItem="8pj-Ym-0yU" secondAttribute="top" constant="8" id="gV4-sz-3qV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1uy-Ko-TZi"/>
                     <connections>
                         <outlet property="BreatheInTimeLabel" destination="HeO-l5-RYR" id="iHA-X9-vt5"/>
                         <outlet property="BreatheOutTimeLabel" destination="TvV-iF-Vn6" id="id8-Qk-8Ij"/>
@@ -232,8 +235,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awT-LR-JDP">
-                                <rect key="frame" x="153.5" y="422.5" width="68" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="146" y="416" width="83" height="57"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
