@@ -1,7 +1,6 @@
 - Check whether sliders in settings feel good on an actual device
 
 Updates:
-- Dark mode support
-- Different orientations
-- iPad support
-- Other updates for iOS 14  
+- Support for dark mode
+- Support for different orientations
+- Now runs on an iPad as well  
