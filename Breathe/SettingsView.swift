@@ -8,13 +8,29 @@ struct SettingsView: View {
 
     var body: some View {
         VStack(spacing: 40) {
-            TimingSlider(label: "Breath in", duration: $expandDuration)
+            TimingSlider(
+                label: "Breath in",
+                minDuration: 1,
+                duration: $expandDuration,
+            )
 
-            TimingSlider(label: "Pause after breath in", duration: $fullPauseDuration)
+            TimingSlider(
+                label: "Pause after breath in",
+                minDuration: 0,
+                duration: $fullPauseDuration,
+            )
 
-            TimingSlider(label: "Breathe out", duration: $shrinkDuration)
+            TimingSlider(
+                label: "Breathe out",
+                minDuration: 1,
+                duration: $shrinkDuration,
+            )
 
-            TimingSlider(label: "Pause after breath out", duration: $emptyPauseDuration)
+            TimingSlider(
+                label: "Pause after breath out",
+                minDuration: 0,
+                duration: $emptyPauseDuration,
+            )
         }
         .padding()
     }
@@ -22,6 +38,7 @@ struct SettingsView: View {
 
 struct TimingSlider: View {
     let label: String
+    let minDuration: TimeInterval
     @Binding var duration: TimeInterval
 
     var body: some View {
@@ -36,10 +53,10 @@ struct TimingSlider: View {
 
             Slider(
                 value: $duration,
-                in: DefaultTiming.minDuration...DefaultTiming.maxDuration,
+                in: minDuration...DefaultTiming.maxDuration,
                 step: 1,
                 label: { Text("\(label) duration") },
-                minimumValueLabel: { Text("\(Int(DefaultTiming.minDuration))") },
+                minimumValueLabel: { Text("\(Int(minDuration))") },
                 maximumValueLabel: { Text("\(Int(DefaultTiming.maxDuration))") },
             )
         }

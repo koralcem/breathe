@@ -16,16 +16,21 @@ struct CircleIndicatorView: View {
                 let elapsedTime = context.date.timeIntervalSinceReferenceDate
                 let timeInCycle = elapsedTime.truncatingRemainder(dividingBy: totalCycleTime)
 
-                Circle()
-                    .fill(.blue)
-                    .scaleEffect(scale(for: timeInCycle))
-                    .toolbar {
-                        ToolbarItem(placement: .primaryAction) {
-                            NavigationLink("Timings") {
-                                SettingsView()
-                            }
+                ZStack {
+                    Circle()
+                        .stroke(.blue, lineWidth: 2)
+
+                    Circle()
+                        .fill(.blue)
+                        .scaleEffect(scale(for: timeInCycle))
+                }
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        NavigationLink("Timings") {
+                            SettingsView()
                         }
                     }
+                }
             }
             .padding()
         }

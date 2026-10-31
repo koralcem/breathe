@@ -13,6 +13,5 @@ enum DefaultTiming {
     static let shrinkDuration: TimeInterval = 6
     static let emptyPauseDuration: TimeInterval = 4
 
-    static let minDuration: TimeInterval = 0
     static let maxDuration: TimeInterval = 10
 }
