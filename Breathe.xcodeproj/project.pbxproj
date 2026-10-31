@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		719264251A8DB4A200BE9490 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719264241A8DB4A200BE9490 /* Images.xcassets */; };
-		719264281A8DB4A200BE9490 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719264261A8DB4A200BE9490 /* LaunchScreen.xib */; };
 		B25BF64130955D420056AAB1 /* BreatheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25BF64030955D3F0056AAB1 /* BreatheApp.swift */; };
 		B25BF64530955D960056AAB1 /* CircleIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25BF64430955D960056AAB1 /* CircleIndicatorView.swift */; };
 		B25BF64730955F1D0056AAB1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25BF64630955F1D0056AAB1 /* SettingsView.swift */; };
 		B25BF649309562050056AAB1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25BF648309562020056AAB1 /* Constants.swift */; };
+		B25BF64D3096872C0056AAB1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25BF64C3096872C0056AAB1 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		719264181A8DB4A200BE9490 /* Smooth Breath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smooth Breath.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7192641C1A8DB4A200BE9490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		719264241A8DB4A200BE9490 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		719264271A8DB4A200BE9490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B25BF64030955D3F0056AAB1 /* BreatheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheApp.swift; sourceTree = "<group>"; };
 		B25BF64430955D960056AAB1 /* CircleIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleIndicatorView.swift; sourceTree = "<group>"; };
 		B25BF64630955F1D0056AAB1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B25BF648309562020056AAB1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B25BF64C3096872C0056AAB1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				B25BF648309562020056AAB1 /* Constants.swift */,
 				B25BF64430955D960056AAB1 /* CircleIndicatorView.swift */,
 				B25BF64630955F1D0056AAB1 /* SettingsView.swift */,
-				719264261A8DB4A200BE9490 /* LaunchScreen.xib */,
+				B25BF64C3096872C0056AAB1 /* Launch Screen.storyboard */,
 				719264241A8DB4A200BE9490 /* Images.xcassets */,
 				7192641C1A8DB4A200BE9490 /* Info.plist */,
 			);
@@ -126,8 +126,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				719264281A8DB4A200BE9490 /* LaunchScreen.xib in Resources */,
 				719264251A8DB4A200BE9490 /* Images.xcassets in Resources */,
+				B25BF64D3096872C0056AAB1 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,17 +146,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		719264261A8DB4A200BE9490 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				719264271A8DB4A200BE9490 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		719264351A8DB4A200BE9490 /* Debug */ = {
