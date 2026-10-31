@@ -6,6 +6,8 @@ struct CircleIndicatorView: View {
     @AppStorage(AppStorageKeys.shrinkDurationKey) private var shrinkDuration: TimeInterval = DefaultTiming.shrinkDuration
     @AppStorage(AppStorageKeys.emptyPauseDurationKey) private var emptyPauseDuration: TimeInterval = DefaultTiming.emptyPauseDuration
 
+    @AppStorage(AppStorageKeys.showIntroText) private var showIntroText = true
+
     private var totalCycleTime: TimeInterval {
         expandDuration + fullPauseDuration + shrinkDuration + emptyPauseDuration
     }
@@ -30,6 +32,11 @@ struct CircleIndicatorView: View {
                             SettingsView()
                         }
                     }
+                }
+                .sheet(isPresented: $showIntroText) {
+                    Text("Breathe in as the circle expands, and out as it shrinks.")
+                        .padding()
+                        .presentationDetents([.medium])
                 }
             }
             .padding()

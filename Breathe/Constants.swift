@@ -5,6 +5,8 @@ enum AppStorageKeys {
     static let fullPauseDurationKey = "fullPauseDurationKey"
     static let shrinkDurationKey = "shrinkDurationKey"
     static let emptyPauseDurationKey = "emptyPauseDurationKey"
+
+    static let showIntroText = "showIntroText"
 }
 
 enum DefaultTiming {
