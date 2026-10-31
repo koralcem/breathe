@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44D0ACAE1C25F36100EDF02A /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0ACA81C25F36100EDF02A /* Icon-29@2x.png */; };
-		44D0ACAF1C25F36100EDF02A /* Icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0ACA91C25F36100EDF02A /* Icon-29@3x.png */; };
-		44D0ACB01C25F36100EDF02A /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0ACAA1C25F36100EDF02A /* Icon-40@2x.png */; };
-		44D0ACB11C25F36100EDF02A /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0ACAB1C25F36100EDF02A /* Icon-40@3x.png */; };
-		44D0ACB21C25F36100EDF02A /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0ACAC1C25F36100EDF02A /* Icon-60@2x.png */; };
-		44D0ACB31C25F36100EDF02A /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0ACAD1C25F36100EDF02A /* Icon-60@3x.png */; };
 		719264251A8DB4A200BE9490 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719264241A8DB4A200BE9490 /* Images.xcassets */; };
 		719264281A8DB4A200BE9490 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719264261A8DB4A200BE9490 /* LaunchScreen.xib */; };
 		B25BF64130955D420056AAB1 /* BreatheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25BF64030955D3F0056AAB1 /* BreatheApp.swift */; };
@@ -22,12 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		44D0ACA81C25F36100EDF02A /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@2x.png"; sourceTree = "<group>"; };
-		44D0ACA91C25F36100EDF02A /* Icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@3x.png"; sourceTree = "<group>"; };
-		44D0ACAA1C25F36100EDF02A /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
-		44D0ACAB1C25F36100EDF02A /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
-		44D0ACAC1C25F36100EDF02A /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
-		44D0ACAD1C25F36100EDF02A /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		719264181A8DB4A200BE9490 /* Smooth Breath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smooth Breath.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7192641C1A8DB4A200BE9490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		719264241A8DB4A200BE9490 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -49,20 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7126FBFB1C1DE53200636C9F /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				44D0ACA81C25F36100EDF02A /* Icon-29@2x.png */,
-				44D0ACA91C25F36100EDF02A /* Icon-29@3x.png */,
-				44D0ACAA1C25F36100EDF02A /* Icon-40@2x.png */,
-				44D0ACAB1C25F36100EDF02A /* Icon-40@3x.png */,
-				44D0ACAC1C25F36100EDF02A /* Icon-60@2x.png */,
-				44D0ACAD1C25F36100EDF02A /* Icon-60@3x.png */,
-			);
-			name = Icons;
-			path = resources/icons;
-			sourceTree = "<group>";
-		};
 		7192640F1A8DB4A200BE9490 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +63,6 @@
 				719264261A8DB4A200BE9490 /* LaunchScreen.xib */,
 				719264241A8DB4A200BE9490 /* Images.xcassets */,
 				7192641C1A8DB4A200BE9490 /* Info.plist */,
-				7126FBFB1C1DE53200636C9F /* Icons */,
 			);
 			path = Breathe;
 			sourceTree = "<group>";
@@ -153,14 +126,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D0ACAE1C25F36100EDF02A /* Icon-29@2x.png in Resources */,
 				719264281A8DB4A200BE9490 /* LaunchScreen.xib in Resources */,
-				44D0ACB01C25F36100EDF02A /* Icon-40@2x.png in Resources */,
-				44D0ACAF1C25F36100EDF02A /* Icon-29@3x.png in Resources */,
-				44D0ACB11C25F36100EDF02A /* Icon-40@3x.png in Resources */,
-				44D0ACB31C25F36100EDF02A /* Icon-60@3x.png in Resources */,
 				719264251A8DB4A200BE9490 /* Images.xcassets in Resources */,
-				44D0ACB21C25F36100EDF02A /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
